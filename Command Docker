@@ -1,2 +1,25 @@
 docker ps  >> Untuk menampilkan sesuatu, seperti ls 
 
+docker image ls >> untuk mengetahui image yang tersedia
+
+docker image pull [namaimage:latest] >> untuk mendownload image di hub docker
+ex docker image pull redis:latest
+
+docker image rm namaimage:tag >> untuk menghapus image 
+ex docker image rm alpine:latest
+
+docker container ls -a >> untuk melihat seluruh kontainer yang sedang berjalan / Tidak.
+
+docker container create --name [namakontainerygdiinginkan] [namaimage]:latest  >> membuat container
+ex dokcer container create --name contohredis redis:latest
+
+docker container start [namacontainer/containerid]  >> menjalankan container
+ex docker container start alpino
+
+docker container stop [namacontainer/containerid] >> menghentikan container
+ex docker container stop alpino
+
+docker container rm [namacontainer]  >> menghapus kontainer
+ex docker container rm alpino
+
+docker container logs [containerid/namacontainer]  
