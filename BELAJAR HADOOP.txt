@@ -1,0 +1,44 @@
+
+hW runnings
+
+get puttty on web
+
+hostname maria_dev@127.0.0.1 port 2222 type SSH
+
+save session HDP pass maria_dev
+
+hadoop fs -ls  >> untuk melihat list
+
+hadoop fs -mkdir [ml-100k] >> membuat direktori
+
+cek hadoop lis menggunakan hadoop fs -ls
+
+hadoop fs -mkdir ml-100k
+
+cek ls dan pwd
+
+wget  http://media.sundog-soft.com/hadoop/ml-100k/u.data
+
+ls
+
+ls -la
+
+hadoop fs -copyFromLocal u.data ml-100k/u.data
+
+
+hadoop fs -ls ml-100k >> mengecek apakah sudah ada apa belum
+
+hadoop fs -rm ml-100k/u.data
+
+
+hadoop fs -rmdir ml-100k
+
+exit
+
+
+
+
+
+
+
+
