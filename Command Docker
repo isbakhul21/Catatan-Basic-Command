@@ -29,6 +29,11 @@ INSTALASI AIRFLOW BASIC
 > Masuk Pada Section 2 >> Menggunakan CD <nama Folder>
 > DOCKER BUILD -T AIRFLOW-BASIC
 
+>>INSTALASI AIRFLOW QUICKLY
+>masuk pada section 3
+command            ./start.sh
+tunggu maybe 30 menit
+
 
 
 
