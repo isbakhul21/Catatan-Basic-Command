@@ -23,3 +23,12 @@ docker container rm [namacontainer]  >> menghapus kontainer
 ex docker container rm alpino
 
 docker container logs [containerid/namacontainer]  
+
+
+INSTALASI AIRFLOW BASIC
+> Masuk Pada Section 2 >> Menggunakan CD <nama Folder>
+> DOCKER BUILD -T AIRFLOW-BASIC
+
+
+
+
