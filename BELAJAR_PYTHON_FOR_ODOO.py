@@ -89,10 +89,20 @@ class Hero():
                 self.__armor = self.__armorstandard * self.__level
 
 
+    def attack(self, musuh):
+            self.gainexp = 100
+
+
 luffy = Hero("luffy", 100, 5, 10)
+zoro = Hero("zoro", 90, 10, 20)
+
 print(luffy.info)
-luffy.gainexp = 180
+luffy.attack(zoro)
+luffy.attack(zoro)
+luffy.attack(zoro)
+luffy.attack(zoro)
 print(luffy.info)
+
 
 ######################################################################################### end enkapsulasi #########################
 
