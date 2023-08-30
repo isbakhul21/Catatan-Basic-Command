@@ -38,3 +38,80 @@ print(luffy.getjumlah_bajak_laut_dua())
 print(Onepiece.getjumlah_bajak_laut_dua())
 print(luffy.getjumlah_bajak_laut_tiga())
 
+
+
+########################################################## Belajar Enkapsulasi ##############################
+
+import os
+import math
+
+sistem_operasi = os.name
+match sistem_operasi:
+	case "posix" : os.system("clear")
+	case "nt" : os.system("cls")
+     
+class Hero():
+
+    __jumlah = 0
+    def __init__(self, name, health, attpower, armor ):
+                    self.__name = name
+                    self.__healthstandard = health
+                    self.__attpowerstandard = attpower
+                    self.__armorstandard = armor
+                    self.__level = 1
+                    self.__exp = 0
+
+                    self.__healthmax = self.__healthstandard * self.__level
+                    self.__attpower = self.__attpowerstandard * self.__level
+                    self.__armor = self.__armorstandard * self.__level
+
+                    self.__health = self.__healthmax
+
+                    Hero.__jumlah += 1
+    @property                
+    def info(self):
+            return "{} : \n\t level {} \n\t health = {}/{} \n\t attack {} \n\t armor {}".format(self.__name, self.__level, self.__health, self.__healthmax, self.__attpower, self.__armor)
+    
+    @property
+    def gainexp(self):
+             pass
+    
+    @gainexp.setter
+    def gainexp(self, addexp):
+        self.__exp =+ addexp
+        if (self.__exp >=  100):
+                print(self.__name , 'level up')
+                self.__level += 1
+                self.__exp -= 100
+
+                self.__healthmax = self.__healthstandard * self.__level
+                self.__attpower = self.__attpowerstandard * self.__level
+                self.__armor = self.__armorstandard * self.__level
+
+
+luffy = Hero("luffy", 100, 5, 10)
+print(luffy.info)
+luffy.gainexp = 180
+print(luffy.info)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
