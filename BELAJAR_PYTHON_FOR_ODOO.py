@@ -105,6 +105,42 @@ print(luffy.info)
 
 
 ######################################################################################### end enkapsulasi #########################
+##################################INHERTANCE PYTHON ###########################################
+import os
+import math
+
+sistem_operasi = os.name
+match sistem_operasi:
+	case "posix" : os.system("clear")
+	case "nt" : os.system("cls")
+     
+class Anime:
+	
+        def __init__(self, name, health):
+                self.name = name
+                self.health = health
+        
+        def showinfo(self):
+                print(" {} dengan health {}".format(self.name, self.health))
+
+
+class Onepiece(Anime):
+        def __init__(self, name):
+                #Anime.__init__(self,name, 100)
+                super().__init__(name, 100)
+                super().showinfo()
+
+class Avatar(Anime):
+        def __init__(self, name):
+                super().__init__(name, 200)
+                super().showinfo()
+
+
+luffy = Onepiece("luffy")
+katara = Avatar("katara")
+
+
+######################################################### END OF INHERITANCE ##########################################
 
 
 
